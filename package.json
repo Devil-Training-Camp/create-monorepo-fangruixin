@@ -1,0 +1,21 @@
+{
+  "name": "create-monorepo",
+  "version": "0.0.1",
+  "description": "Init a monorepo in seconds",
+  "license": "MIT",
+  "bin": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "ncc build ./index.ts -w -o dist/",
+    "build": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1",
+    "typescript": "^5.2.2"
+  }
+}
