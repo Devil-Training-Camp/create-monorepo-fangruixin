@@ -5,7 +5,13 @@
     "strict": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "skipLibCheck": false
+    "skipLibCheck": false,
+    "paths": {
+      ":prompts/*": ["./prompts/*"],
+      ":utilities/*": ["./utilities/*"],
+      ":scaffolds/*": ["./scaffolds/*"],
+      ":templates/*": ["./templates/*"],
+    }
   },
   "exclude": ["templates", "dist"]
 }
