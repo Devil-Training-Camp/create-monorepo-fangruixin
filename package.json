@@ -10,9 +10,11 @@
     "dist"
   ],
   "scripts": {
-    "dev": "ncc build ./index.ts -w -o dist/",
-    "build": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register"
+    "dev": "node ./scripts/dev.mjs",
+    "build": "node ./scripts/build.mjs"
   },
+  "exports": "./dist/index.js",
+  "type": "module",
   "engines": {
     "node": ">=18.0.0"
   },
@@ -21,6 +23,7 @@
     "@types/prompts": "^2.4.7",
     "@types/validate-npm-package-name": "^4.0.1",
     "@vercel/ncc": "^0.38.1",
+    "esbuild": "^0.19.5",
     "typescript": "^5.2.2"
   },
   "dependencies": {
