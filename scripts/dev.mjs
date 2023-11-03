@@ -1,4 +1,5 @@
 import * as esbuild from 'esbuild'
+import { copy } from 'esbuild-plugin-copy'
 
 const { watch } = await esbuild.context({
   entryPoints: ['index.ts'],
@@ -18,6 +19,17 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
     `
   },
+  plugins: [
+    copy({
+      assets: [
+        {
+          from: ['./templates/**/*'],
+          to: ['./templates'],
+        }
+      ],
+      watch: true,
+    })
+  ]
 })
 
 await watch()
