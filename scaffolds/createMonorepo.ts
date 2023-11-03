@@ -3,7 +3,7 @@ import { isWriteable } from ':utilities/isWritable'
 import { makeDir } from ':utilities/makeDir'
 import path from 'node:path'
 import { green } from 'picocolors'
-import { installTemplate } from ':templates/installTemplate'
+import { installTemplate } from ':utilities/installTemplate'
 
 export async function createMonorepo(options: {
   monorepoPath: string
