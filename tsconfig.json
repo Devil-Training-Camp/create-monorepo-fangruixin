@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": false,
+    "paths": {
+      ":prompts/*": ["./prompts/*"],
+      ":utilities/*": ["./utilities/*"],
+      ":scaffolds/*": ["./scaffolds/*"],
+      ":templates/*": ["./templates/*"],
+    }
+  },
+  "exclude": ["templates", "dist"]
+}

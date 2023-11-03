@@ -1,0 +1,37 @@
+{
+  "name": "create-monorepo",
+  "version": "0.0.1",
+  "description": "Init a monorepo in seconds",
+  "license": "MIT",
+  "bin": {
+    "create-monorepo": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "node ./scripts/dev.mjs",
+    "build": "node ./scripts/build.mjs"
+  },
+  "exports": "./dist/index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "@types/prompts": "^2.4.7",
+    "@types/validate-npm-package-name": "^4.0.1",
+    "@vercel/ncc": "^0.38.1",
+    "esbuild": "^0.19.5",
+    "esbuild-plugin-copy": "^2.1.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "fast-glob": "^3.3.1",
+    "picocolors": "^1.0.0",
+    "prompts": "^2.4.2",
+    "validate-npm-package-name": "^5.0.0"
+  }
+}
