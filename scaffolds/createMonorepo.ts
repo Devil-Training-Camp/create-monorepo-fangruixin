@@ -37,6 +37,7 @@ export async function createMonorepo(options: {
   process.chdir(root)
 
   await installTemplate({
-    templateName: 'monorepo'
+    templateName: 'monorepo',
+    root
   })
 }
