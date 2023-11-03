@@ -1,0 +1,36 @@
+{
+  "name": "monorepo-example",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@8.6.2",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.8.0",
+    "pnpm": ">=8.6.2"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "dev": "echo dev",
+    "build": "echo build",
+    "lint": "pnpm --recursive run --workspace-concurrency=1 --no-bail lint",
+    "lint:fix": "pnpm --recursive run --no-bail lint:fix && eslint . --fix",
+    "release": "echo release",
+    "test": "vitest",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config-react": "^0.40.2",
+    "@antfu/eslint-config-ts": "^0.40.2",
+    "@antfu/eslint-config-vue": "^0.40.2",
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0",
+    "@release-it/bumper": "^5.1.0",
+    "@types/node": "16",
+    "eslint": "^8.47.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.1",
+    "release-it": "^16.2.1",
+    "typescript": "^5.0.2",
+    "vitest": "^0.34.1"
+  }
+}
